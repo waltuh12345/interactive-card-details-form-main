@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="dist/main.css">
+</head>
+<body>
+  <picture>
+    <source media="(max-width: 40rem)" srcset="images/bg-main-mobile.png">
+    <source media="(min-width: 40rem)" srcset="images/bg-main-desktop.png">
+    <img src="">
+  </picture>
+
+
+  <div class="container">
+    
+    <div class="card-wrapper">
+    
+      <div class="card1 card">
+        <img src="images/bg-card-back.png" alt="">
+        <div class="absolute-wrapper"></div>
+      </div>
+
+      <div class="card2 card">
+        <img src="images/bg-card-front.png" alt="">
+        <div class="absolute-wrapper">
+          <img src="images/card-logo.svg" alt="">
+          <div class="card-info">
+            <h3>
+              0000 0000 0000 0000
+            </h3>
+            <div class="">
+              <h5>owner</h5>
+              <h5>date</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    </div>
+    <form action="/" method="get">
+      <ul>
+
+
+        <li class="box">
+          <label for="name">Cardholder Name</label>
+          <input id="name" type="text" placeholder="Jane Appleseed">
+          <span>err</span>
+        </li>
+        <li class="box">
+          <label for="Number">Card Number</label>
+          <input id="number" type="number" placeholder="e.g. 1234 5678 9123 0000" maxlength="17">
+          <span>err</span>
+        </li>
+        <li class="even-col">
+          <div class="box">
+            <label for="month">Exp. Date</label>
+            <input id="month" type="number" placeholder="MM" maxlength="4">
+            <span>err</span>
+          </div>
+          <div class="box">
+            <label for="year">(MM/YY)</label>
+            <input id="year" type="number" placeholder="YY">
+            <span>err</span>
+          </div>
+          <div class="box">
+            <label for="cvc">CVC</label>
+            <input id="cvc" type="number" placeholder="e.g. 123">
+            <span>err</span>
+          </div>
+        </li>
+      </ul>
+      <button>Confirm</button>
+      
+    </form>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>

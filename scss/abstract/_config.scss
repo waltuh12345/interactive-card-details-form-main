@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+$ff: 'Space Grotesk', sans-serif;
+
+/* Step -5: 11.25px → 11.80px */
+$secondary-text: clamp(0.70rem, calc(0.53rem + 0.55vw), 0.74rem);
+
+/* Step -4: 13.50px → 14.75px */
+$primary-text: clamp(0.84rem, calc(0.45rem + 1.25vw), 0.92rem);
+
+/* Step -3: 16.20px → 18.43px */
+$sub-title: clamp(1.01rem, calc(0.32rem + 2.23vw), 1.15rem);
+
+/* Step -2: 19.44px → 23.04px */
+$title: clamp(1.22rem, calc(0.09rem + 3.60vw), 1.44rem);
+
+/* Step -1: 23.33px → 28.80px */
+$sub-heading: clamp(1.46rem, calc(-0.25rem + 5.47vw), 1.80rem);
+
+/* Step 0: 28.00px → 36.00px */
+$heading: clamp(1.75rem, calc(-0.75rem + 8.00vw), 2.25rem);
+
+//===ICONS=====//
+
+.icon::before {
+  /* removed font- based rules */
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font: var(--fa-font-solid);
+}
+
+//==COLORS===//
+
+$clr-primary-gradient400: hsl(249, 99%, 64%);
+$clr-primary-gradient500: hsl(278, 94%, 30%);
+$clr-primary300: hsl(0, 100%, 66%);
+
+$clr-neutral100: hsl(0, 0%, 100%);
+$clr-neutral200: hsl(270, 3%, 87%);
+$clr-neutral300: hsl(279, 6%, 55%);
+$clr-neutral400: hsl(278, 68%, 11%);
+
+body {
+  font-family: $ff;
+  font-size: 15px;
+  h3 {
+    font-size: 18px;
+  }
+  h5{
+    font-size: $secondary-text;
+    color: $clr-neutral200;
+  }
+}
+.even-col {
+  display: flex;
+  > * {
+    flex: 1;
+  }
+}

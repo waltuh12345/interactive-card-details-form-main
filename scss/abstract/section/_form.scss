@@ -1,0 +1,90 @@
+@use '../config' as *;
+button {
+  cursor: pointer;
+}
+
+form {
+  input,button {
+    width: 100%;
+    height: 2.5rem;
+    border: none;
+    border-radius: 8px;
+  }
+
+  label,span {
+    font-size: 13px;
+  }
+
+  input {
+    &::placeholder {
+      color: darken($clr-neutral200, 15%);
+    }
+  }
+
+  label {
+    color: $clr-neutral400;
+  }
+
+  span {
+    opacity: 0;
+    height: 1rem;
+    display: block;
+  }
+}
+
+form {
+  padding-bottom: 1rem;
+  ul {
+    margin-bottom: 1.5rem;
+    display: grid;
+    gap: .4rem;
+  }
+
+  .box {
+    input {
+      margin: .2rem 0 0 0;
+      padding: 0 0 0 1rem;
+      box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+      border: 1.4px solid rgba(128, 128, 128, 0);
+    }
+  
+    &.warning{
+      input {
+        box-shadow: rgba(255, 255, 255, 0) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0) 0px 0px 0px 1px;
+        border: 1.4px solid $clr-primary300;
+      }
+      span {
+        color: $clr-primary300;
+        opacity: 1;
+      }
+    }
+  }
+
+  .even-col {
+    gap: .8rem;
+  }
+
+  button {
+    background-color: $clr-neutral400;
+    color: $clr-neutral100;
+  }
+}
+form .success-submit {
+  color: darken($clr-neutral300, 25%);
+  text-align: center;
+  font-size: 14px;
+  h2 {
+    font-size: $sub-heading;
+    color: $clr-neutral400;
+    font-weight: 500;
+    margin: 1rem 0;
+  }
+  img {
+    width: 50px;
+    margin-inline: auto;
+  }
+  button {
+    margin-top: 2rem;
+  }
+}
+
